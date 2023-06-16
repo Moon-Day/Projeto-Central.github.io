@@ -3,25 +3,41 @@
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
-
+body{
+  background-color: rgb(117, 117, 255);
+}
 nav{
     width: 100%;
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.701);
     display:flex;
     justify-content: center;
-    height: 70px;
+    height: 100px;
 }
 nav ul{
     display: flex;
     margin: 22px auto;
+    align-items: center;
 }
 nav ul li{
     list-style: none;
-    padding: 0 10px;
+    padding: 0 50px 0 0;
+    
+    color: white;
+    font-size: 20px;
+    overflow-y: hidden;
+    cursor: pointer;
+    transition: 1s;
+
 }
 
+nav ul li:hover{
+  font-size: 40px;
+}
+/*  ============================================ */
 
+/*  ============================================ */
 
 .container-slider {
     display: flex;
@@ -39,29 +55,81 @@ nav ul li{
     justify-content: center;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 255, 0.626);
   }
   
   .slider {
+    margin: 0 auto;
     opacity: 0;
     transition: opacity .2s;
     position: absolute;
     width: 110%;
     height: 100%;
-
-    border-radius: 10px;
+    transition: 2s;
+    padding: 20px;
   }
   
-  .on {
+.um{
+width: 500px ;
+}
+.dois{
+  width: 700px;
+  
+}
+.tres{
+  width: 50%;
+}
+.quatro{
+  width: 100%;
+}
+.cinco{
+  width: 70% ;
+  
+}
+.seis{
+  width: 50% ;
+}
+
+.sete{
+  width: 70% ;
+  
+}
+.oito{
+  width: 70%;
+}
+ .nove{
+  width: 100%;
+ }
+.dez{
+  width: 90%;
+  
+}
+.onze{
+  width: 30%;
+  
+}
+
+.doze{
+  width: 30%;
+  
+}
+
+.treze{
+  width: 50% ;
+  
+}
+
+.on {
     opacity: 1;
   }
   
   #prev-button, #next-button {
-    width: 30px;
-    height: 30px;
+    width: 70px;
+    height: 70px;
     border: none;
     background-color: transparent;
     cursor: pointer;
-    
+      overflow-y: hidden;
   }
   #prev-button{
     left: 0;
@@ -81,14 +149,20 @@ nav ul li{
     transform: rotate(180deg);
   }
 
+/*  ============================================ */
+/*  ============================================ */
+
+
+
 .secao-eu{
+  overflow-y: hidden;
+  display: flex;
     width: 100%;
-    height: 400px;
-    background-color: blueviolet;
+    height: 900px;
+    background-color: rgba(0, 0, 115, 0.805);
 }
 .container2{
     width: 100%;
-    height: 100%;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -96,7 +170,8 @@ nav ul li{
 .paragrafo1{
     margin: 100px auto;
     width: 50%;
-    
+    font-size: 25px;
+    color: white;
 }
 
 .secao-eu img{
@@ -104,21 +179,34 @@ nav ul li{
     width: 400px;
     height: 400px;
 }
+
+
+
+
+
+/*  ============================================ */
+/*  ============================================ */
+
 .secao-projetos{
     background-color: rgb(117, 117, 255);
     width: 100vw;
-    padding: 100px;
+    padding: 100px 25px;
+    margin: 100px auto;
     display: flex;
     justify-content: center;
 
 }
 .projetos{
     width: 100%;
-    height: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     grid-gap: 30px;
     padding-top: 50px;
+}
+
+.p1:hover {
+  
+  padding: 20px;
 }
 .p1{
     height: 400px;
@@ -129,6 +217,8 @@ nav ul li{
     align-items: center;
     justify-content: space-around;
     text-align: center;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.481);
+    transition: .3s;
 }
 
 .p1 h2{
@@ -137,6 +227,8 @@ nav ul li{
 .p1 img{
     width: 70%;
     height: 70%;
+    border-radius: 10px;
+    
 }
 .p1 button {
     width: 90%;
@@ -154,3 +246,33 @@ nav ul li{
 
 
 
+@media screen and (max-width: 500px){
+
+  .slider{
+   width: 100%;
+   height: 100%;
+  }
+  .container-slider{
+    height: 400px;
+  }
+  #prev-button, #next-button{
+    width: 30px;
+  }
+
+  .secao-eu{
+    height: 400px;
+    
+  }
+  .paragrafo1{
+    font-size: 11px;
+  }
+  .secao-eu img{
+    width: 100px;
+    height: 100px;
+  }
+
+  .secao-projetos{
+    margin: 0 ;
+    padding: 0 2px;
+  }
+}

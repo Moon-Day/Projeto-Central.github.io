@@ -4,6 +4,14 @@ const btnNext = document.getElementById('next-button');
 
 let currentSlide = 0; // slide atual 
 
+setInterval (function (){
+  
+  nextSlider();
+
+}, 3000)
+
+
+
 function hideSlider() { // remover a class on do slide
   slider.forEach(item => item.classList.remove('on'))
 }
