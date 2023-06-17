@@ -46,7 +46,7 @@ function prevSlider() {
 
 
 
-
+// ==============================
 btnNext.addEventListener('click', nextSlider);
 btnPrev.addEventListener('click', prevSlider);
 document.addEventListener('keydown', function(event){
